@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/jasondl-trajector.github.io',
+    basePath: '/next-portfolio',
     output: 'export',
     reactStrictMode: true,
 };
