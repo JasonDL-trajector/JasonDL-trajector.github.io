@@ -20,10 +20,9 @@ jobs:
   build-app:
     runs-on: ubuntu-latest
     env:
-          SENTRY_AUTH_TOKEN: 6b9894c8e893c1a3b3d1c7fd239f456ac363e0fe083e7b3bc71fcf16a98fbc00
+          SENTRY_AUTH_TOKEN: d1fea55a0a66767dfbcf4c65d9df32ee8a0ca796866b5b4ba08c4b5db125b0f1
           SENTRY_ORG: trajector-fp
           SENTRY_PROJECT: javascript-nextjs
-          # SENTRY_URL: https://sentry.io/
 
     steps:
       - name: Checkout
