@@ -20,7 +20,7 @@ jobs:
   build-app:
     runs-on: ubuntu-latest
     env:
-          SENTRY_AUTH_TOKEN: f71d0b1523f920eb52bc6b81cc14006f45b1bb570a42030eed71db3d61906b1c
+          SENTRY_AUTH_TOKEN: 6b9894c8e893c1a3b3d1c7fd239f456ac363e0fe083e7b3bc71fcf16a98fbc00
           SENTRY_ORG: trajector-fp
           SENTRY_PROJECT: javascript-nextjs
           # SENTRY_URL: https://sentry.io/
