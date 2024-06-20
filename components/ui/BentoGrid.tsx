@@ -115,23 +115,28 @@ export const BentoGridItem = ({
           {id === 2 && <GlobeDemo />}
 
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 top-5 lg:right-2">
-              <div className="flex flex-col gap-1 lg:gap-6">
-                {['Next.js', 'Tailwind CSS', 'TypeScript'].map
+             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+             {/* tech stack lists */}
+             <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                {['Next.js', 'Typescript', 'Python'].map
                 ((item) => (
                   <span key={item} className="py-5 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                     {item}
                   </span>
                 ))}
 
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]"/>
+                <span className="py-5 px-3 rounded-lg text-center bg-[#10132E]"/>
               </div>
 
-              <div className="flex flex-col gap-3 lg:gap-8 -top-5">
-              <span className="py-5 px-3 rounded-lg text-center  bg-[#10132E]"/>
-                {['AWS', 'SST', 'CI/CD'].map
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                {['AWS', 'SST', 'Tailwind'].map
                 ((item) => (
-                  <span key={item} className="py-5 lg:py-2 lg:px-8 px-5 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
+                  <span
+                    key={item}
+                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
                     {item}
                   </span>
                 ))}
