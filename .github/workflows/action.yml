@@ -8,11 +8,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+          # Ensure the path to the lock file is correct:
+          cache-dependency-path: '**/package-lock.json'
 
       - name: Cache dependencies ⚡
         uses: actions/cache@v3
@@ -25,3 +30,4 @@ jobs:
       - name: Install dependencies 🔧
         if: steps.cache_dependencies.outputs.cache-hit != 'true'
         run: npm ci
+        
