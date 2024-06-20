@@ -19,6 +19,11 @@ concurrency:
 jobs:
   build-app:
     runs-on: ubuntu-latest
+    env:
+          SENTRY_AUTH_TOKEN: f71d0b1523f920eb52bc6b81cc14006f45b1bb570a42030eed71db3d61906b1c
+          SENTRY_ORG: trajector-fp
+          SENTRY_PROJECT: javascript-nextjs
+          # SENTRY_URL: https://sentry.io/
 
     steps:
       - name: Checkout
@@ -26,14 +31,6 @@ jobs:
 
       - name: Create Sentry release
         uses: getsentry/action-release@v1
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: trajector-fp
-          SENTRY_PROJECT: javascript-nextjs
-          # SENTRY_URL: https://sentry.io/
-        with:
-          environment: github-pages
-          
 
       - name: Detect package manager
         id: detect-package-manager
