@@ -7,7 +7,7 @@ import Favicon from '/public/favicon.ico';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jason's Portfolio",
+  title: "Jason - Portfolio",
   description: "Modern Portfolio with NextJS",
   icons: [{ rel: 'icon', url: Favicon.src }],
 };
