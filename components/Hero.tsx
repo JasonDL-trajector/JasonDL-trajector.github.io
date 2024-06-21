@@ -37,6 +37,7 @@ const Hero = () => {
                     title="Show my GitHub Profile"
                     icon={<FaLocationArrow />}
                     position= 'right'
+                    otherClasses='text-white'
                     />
                 </a>
 
