@@ -62,13 +62,13 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-non justify-between flex flex-col space-y-4 border border-white/[0.1]",
+        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-non justify-between flex flex-col space-y-4 border border-white/[0.1] shadow-[0_8px_16px_rgb(0_0_0/0.7)] ",
         className
       )}
       style={{
-        background: "rgb(4,7,29)",
+        background: "rgb(250 250 250)",
         backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+          "linear-gradient(90deg, rgb(252, 251, 238) 0%, rgb(212 212 216) 100%)",
       }}
     >
 
@@ -95,9 +95,9 @@ export const BentoGridItem = ({
 
         {id === 6 && (
           <BackgroundGradientAnimation>
-            {/* <div 
+            <div 
               className="absolute z-50 flex items-center justify-center text-white font-bold"
-            /> */}
+            />
           </BackgroundGradientAnimation>
         )}
 
@@ -115,34 +115,34 @@ export const BentoGridItem = ({
           {id === 2 && <GlobeDemo />}
 
           {id === 3 && (
-             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+             <div className="flex gap-1 lg:gap-5 w-fit absolute right-3 lg:right-3">
+
              {/* tech stack lists */}
-             <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                {['Next.js', 'Typescript', 'Python'].map
-                ((item) => (
-                  <span key={item} className="py-5 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
-                    {item}
-                  </span>
-                ))}
-
-                <span className="py-5 px-3 rounded-lg text-center bg-[#10132E]"/>
-              </div>
-
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
-                {['AWS', 'SST', 'Tailwind'].map
-                ((item) => (
-                  <span
-                    key={item}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
+                  {['Next.js', 'Typescript', 'Python'].map
+                  ((item) => (
+                    <span key={item} className="py-5 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#e8e8e8]">
+                      {item}
+                    </span>
+                  ))}
 
-               
-              </div>
+                  <span className="py-5 px-3 rounded-lg text-center bg-[#e8e8e8]"/>
+                </div>
+
+                <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                  <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#e8e8e8]"></span>
+                  {['AWS', 'SST', 'Tailwind'].map
+                  ((item) => (
+                    <span
+                      key={item}
+                      className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                      lg:opacity-100 rounded-lg text-center bg-[#e8e8e8]"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+
             </div>
           )}
 
@@ -164,7 +164,7 @@ export const BentoGridItem = ({
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
+                otherClasses="bg-zinc-200 text-black-100"
               />
             </div>
           )}
