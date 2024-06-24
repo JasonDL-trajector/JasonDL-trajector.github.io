@@ -78,8 +78,8 @@ export const BackgroundGradientAnimation = ({
   const [tgX, setTgX] = useState(0);
   const [tgY, setTgY] = useState(0);
 
-  if ( resolvedTheme === 'dark' ) {
-    useEffect(() => {
+  useEffect(() => {
+    if (resolvedTheme === 'dark') {
       document.body.style.setProperty(
         "--gradient-background-start",
         gradientBackgroundStartDark
@@ -94,11 +94,7 @@ export const BackgroundGradientAnimation = ({
       document.body.style.setProperty("--fourth-color", fourthColorDark);
       document.body.style.setProperty("--fifth-color", fifthColorDark);
       document.body.style.setProperty("--pointer-color", pointerColorDark);
-      document.body.style.setProperty("--size", size);
-      document.body.style.setProperty("--blending-value", blendingValue);
-    }, [resolvedTheme, gradientBackgroundStartDark, gradientBackgroundEndDark, firstColorDark, secondColorDark, thirdColorDark, fourthColorDark, fifthColorDark, pointerColorDark, size, blendingValue]);
-  } else {
-    useEffect(() => {
+    } else {
       document.body.style.setProperty(
         "--gradient-background-start",
         gradientBackgroundStart
@@ -113,10 +109,11 @@ export const BackgroundGradientAnimation = ({
       document.body.style.setProperty("--fourth-color", fourthColor);
       document.body.style.setProperty("--fifth-color", fifthColor);
       document.body.style.setProperty("--pointer-color", pointerColor);
-      document.body.style.setProperty("--size", size);
-      document.body.style.setProperty("--blending-value", blendingValue);
-    }, [resolvedTheme, gradientBackgroundStart, gradientBackgroundEnd, firstColor, secondColor, thirdColor, fourthColor, fifthColor, pointerColor, size, blendingValue]);
-  }
+    }
+    document.body.style.setProperty("--size", size);
+    document.body.style.setProperty("--blending-value", blendingValue);
+  }, [resolvedTheme, gradientBackgroundStart, gradientBackgroundEnd, firstColor, secondColor, thirdColor, fourthColor, fifthColor, pointerColor, size, blendingValue, gradientBackgroundStartDark, gradientBackgroundEndDark, firstColorDark, secondColorDark, thirdColorDark, fourthColorDark, fifthColorDark, pointerColorDark]);
+  
 
   
 
