@@ -7,7 +7,7 @@ const Clients = () => {
     <div className="py-20" id="testimonials">
       <h1 className="heading">
           Kind words from{" "}
-          <span className="text-zinc-600"> satisfied colleagues</span>
+          <span className="text-zinc-600 dark:text-purple">colleagues</span>
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">
@@ -19,7 +19,7 @@ const Clients = () => {
           />
 
           <div className='flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10'>
-             {companies.map(({id, img, name}) => (
+             {/* {companies.map(({id, img, name}) => (
                 <div key={id} className="flex flex-col md:max-w-80 max-w-32 gap 2 align-items-center justify-center">
                   <div className='flex flex-col items-center justify-center gap-2'>
                     <img src={img} alt={name} className="md:w-20 w-20" />
@@ -27,7 +27,7 @@ const Clients = () => {
                   </div>
                
                 </div>
-             ))}
+             ))} */}
           </div>
       </div>
     </div>

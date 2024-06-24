@@ -8,7 +8,7 @@ const Approach = () => {
   return (
     <section className="w-full py-20">
         <h1 className="heading">
-            My <span className="text-zinc-600">Approach</span>
+            My <span className="text-zinc-600 dark:text-purple">Approach</span>
         </h1>
 
         <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
@@ -27,10 +27,10 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Progress Update"
+          title="Progress Update"
           icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
+          des="Once we agree on the plan, I'll dive into
+          coding. From initial figma sketches to polished code, I keep you updated
           every step of the way."
         >
           <CanvasRevealEffect

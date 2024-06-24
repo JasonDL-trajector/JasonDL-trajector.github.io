@@ -14,7 +14,9 @@ export const gridItems = [
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/b1.png",
+    imgDark: "/b1.svg",
     spareImg: "",
+    spareImgDark: "",
   },
   {
     id: 2,
@@ -24,7 +26,9 @@ export const gridItems = [
     imgClassName: "",
     titleClassName: "justify-start",
     img: "",
+    imgDark: "",
     spareImg: "",
+    spareImgDark: "",
   },
   {
     id: 3,
@@ -34,7 +38,9 @@ export const gridItems = [
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
+    imgDark: "",
     spareImg: "",
+    spareImgDark: "",
   },
   {
     id: 4,
@@ -44,7 +50,9 @@ export const gridItems = [
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
-    spareImg: "/b4.svg",
+    imgDark: "/grid.svg",
+    spareImg: "/b4.png",
+    spareImgDark: "/b4.svg",
   },
 
   {
@@ -55,7 +63,9 @@ export const gridItems = [
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/b51.png",
+    imgDark: "/b5.svg",
     spareImg: "/grid.svg",
+    spareImgDark: "/grid.svg",
   },
   {
     id: 6,
@@ -65,7 +75,9 @@ export const gridItems = [
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center text-zinc-200",
     img: "",
+    imgDark: "",
     spareImg: "",
+    spareImgDark: "",
   },
 ];
 
@@ -74,7 +86,7 @@ export const projects = [
     id: 1,
     title: "Modernized PhilHealth",
     des: "A modernized version of PhilHealth's website using React Typescript with Material UI",
-    img: "/p1.svg",
+    img: "/philhealth.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
     jump: "/philhealth-modernized",
     link: "https://github.com/JasonDL-trajector/PhilHealth-Modernized",
@@ -83,7 +95,7 @@ export const projects = [
     id: 2,
     title: "Replica",
     des: "A web application built with ReactJS that serves as an AI Chatbot similar to ChatGPT. It integrates with the OpenAI API to provide users with a conversational AI experience.",
-    img: "/p2.svg",
+    img: "/replica.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
     jump: "/replica",
     link: "https://github.com/JasonDL-trajector/Replica",
@@ -101,7 +113,7 @@ export const projects = [
     id: 4,
     title: "Kabet Chats",
     des: "Recreated a popular chat app with modern styling, user authentication, and file uploads using React.js",
-    img: "/p4.svg",
+    img: "/kabet-chats.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
     jump: "/kabet-chats",
     link: "https://github.com/JasonDL-trajector/Kabet-Chats",
@@ -109,6 +121,36 @@ export const projects = [
 ];
 
 export const testimonials = [
+  {
+    quote:
+      "I've been working with Emmanuel during the half of his internship and I have a pleasure to work with him. In his assigned role as team leader of the application engineering interns team, he really shows what should be a team leader and I am very happy for the successful project that has been done under their team. I am very impressed with the software development skills he has and I am confident to highly recommend him for any future endeavors and companies that he will be working with in the future.",
+    name: "Nick De Cilio",
+    title: "IT CRM Specialist/Consultant | IT Executive Officers",
+  },
+  {
+    quote:
+      "I've been working with Emmanuel during the half of his internship and I have a pleasure to work with him. In his assigned role as team leader of the application engineering interns team, he really shows what should be a team leader and I am very happy for the successful project that has been done under their team. I am very impressed with the software development skills he has and I am confident to highly recommend him for any future endeavors and companies that he will be working with in the future.",
+    name: "Nick De Cilio",
+    title: "IT CRM Specialist/Consultant | IT Executive Officers",
+  },
+  {
+    quote:
+      "I've been working with Emmanuel during the half of his internship and I have a pleasure to work with him. In his assigned role as team leader of the application engineering interns team, he really shows what should be a team leader and I am very happy for the successful project that has been done under their team. I am very impressed with the software development skills he has and I am confident to highly recommend him for any future endeavors and companies that he will be working with in the future.",
+    name: "Nick De Cilio",
+    title: "IT CRM Specialist/Consultant | IT Executive Officers",
+  },
+  {
+    quote:
+      "I've been working with Emmanuel during the half of his internship and I have a pleasure to work with him. In his assigned role as team leader of the application engineering interns team, he really shows what should be a team leader and I am very happy for the successful project that has been done under their team. I am very impressed with the software development skills he has and I am confident to highly recommend him for any future endeavors and companies that he will be working with in the future.",
+    name: "Nick De Cilio",
+    title: "IT CRM Specialist/Consultant | IT Executive Officers",
+  },
+  {
+    quote:
+      "I've been working with Emmanuel during the half of his internship and I have a pleasure to work with him. In his assigned role as team leader of the application engineering interns team, he really shows what should be a team leader and I am very happy for the successful project that has been done under their team. I am very impressed with the software development skills he has and I am confident to highly recommend him for any future endeavors and companies that he will be working with in the future.",
+    name: "Nick De Cilio",
+    title: "IT CRM Specialist/Consultant | IT Executive Officers",
+  },
   {
     quote:
       "I've been working with Emmanuel during the half of his internship and I have a pleasure to work with him. In his assigned role as team leader of the application engineering interns team, he really shows what should be a team leader and I am very happy for the successful project that has been done under their team. I am very impressed with the software development skills he has and I am confident to highly recommend him for any future endeavors and companies that he will be working with in the future.",
@@ -137,31 +179,31 @@ export const workExperience = [
     id: 1,
     title: "Software Engineer I",
     company: "Trajector",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    desc: "Assisted in the development of a web-based platform for Trajector using SST, NextJS, and Typescript",
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: "/trajector-logo.png",
   },
   {
     id: 2,
     title: "Applications Engineering Lead",
     company: "Trajector",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    desc: "Led a team of software engineer interns in developing projects for the company",
     className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
+    thumbnail: "/trajector-logo.png",
   },
   {
     id: 3,
     title: "Software Engineer",
     company: "FourPointZero, Inc.",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    desc: "Created a front-end web application for job workers",
     className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
+    thumbnail: "/fourpointzero_inc_logo.png",
   },
   {
     id: 4,
     title: "Lead Fullstack Developer",
     company: "Capstone Team",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    desc: "Developed and maintained a Rental Management System that won awards in TICAP",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },

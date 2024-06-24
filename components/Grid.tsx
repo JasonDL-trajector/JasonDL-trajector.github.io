@@ -1,13 +1,15 @@
-import React from 'react'
+"use client"
+
 import { BentoGrid, BentoGridItem } from './ui/BentoGrid'
 import { gridItems } from '@/data'
 
 const Grid = () => {
+  
   return (
     <section id='about'>
         <BentoGrid>
             {gridItems.map
-            (({ id, title, description, className, img, imgClassName, titleClassName, spareImg }) => (
+            (({ id, title, description, className, img, imgDark, imgClassName, titleClassName, spareImg, spareImgDark }) => (
                 <BentoGridItem 
                     id={id}
                     key={id}
@@ -15,9 +17,11 @@ const Grid = () => {
                     description={description}
                     className={className}
                     img={img}
+                    imgDark={imgDark}
                     imgClassName={imgClassName}
                     titleClassName={titleClassName}
                     spareImg={spareImg}
+                    spareImgDark={spareImgDark}
                 />
             ))}
         </BentoGrid>
