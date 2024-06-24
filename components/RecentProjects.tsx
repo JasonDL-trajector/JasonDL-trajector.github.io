@@ -1,16 +1,39 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-
+import { useState, useEffect } from "react";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import { useTheme } from "next-themes";
 
 const RecentProjects = () => {
+
+  const [ mounted, setMounted ] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
+  const [ isChecked, setIsChecked ] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    setIsChecked(resolvedTheme === 'dark');
+  }, [resolvedTheme]);
+
+  const onChange = (checked: boolean) => {
+    if (!mounted) {
+      return null;
+    }
+
+    if (checked) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  };
+
   return (
     <div className="py-20" id="projects">
       <h1 className="heading">
         A small selection of{" "}
-        <span className="text-zinc-600">recent projects</span>
+        <span className="text-zinc-600 dark:text-purple">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
         {projects.map((item) => (
@@ -28,9 +51,9 @@ const RecentProjects = () => {
                 <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
 
                   <div
-                    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                    style={{ backgroundColor: "#090909" }}
-                  >
+                      className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                      style={{ backgroundColor: resolvedTheme === 'dark' ? '#13162D' : '#090909' }}
+                    >
                     <img src="/bg.png" alt="bgimg" />
                   </div>
                   <img
@@ -47,7 +70,7 @@ const RecentProjects = () => {
                 <p
                   className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
                   style={{
-                    color: "text-zinc-600",
+                    color: resolvedTheme === 'dark' ? 'text-zinc-600' : '#626264',
                     margin: "1vh 0",
                   }}
                 >
@@ -59,7 +82,7 @@ const RecentProjects = () => {
                     {item.iconLists.map((icon, index) => (
                       <div
                         key={index}
-                        className="border border-white/[.2] rounded-full bg-zinc-200 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                        className="border border-white/[.2] rounded-full bg-zinc-200 dark:bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                         style={{
                           transform: `translateX(-${5 * index + 2}px)`,
                         }}
@@ -70,10 +93,10 @@ const RecentProjects = () => {
                   </div>
 
                   <div className="flex justify-center items-center">
-                    <p className="flex lg:text-xl md:text-xs text-sm text-zinc-600">
+                    <p className="flex lg:text-xl md:text-xs text-sm text-zinc-600 dark:text-purple">
                       Check GitHub Repo
                     </p>
-                    <FaLocationArrow className="ms-3" color="#626264" />
+                    <FaLocationArrow className="ms-3" color={resolvedTheme === 'dark' ? '#CBACF9' : '#626264'} />
                   </div>
                 </div>
                 </a>

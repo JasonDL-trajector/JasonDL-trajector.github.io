@@ -16,10 +16,10 @@ const Footer = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-zinc-600">your</span> digital
+          Ready to take <span className="text-zinc-600 dark:text-purple">your</span> digital
           presence to the next level?
         </h1>
-        <p className="text-black-200 md:mt-10 my-5 text-center">
+        <p className="text-black-200 dark:text-white-200 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
@@ -41,7 +41,7 @@ const Footer = () => {
           {socialMedia.map((info) => (
             <div
               key={info.id}
-              className="mt-10 lg:mt-0 w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-black-100 rounded-lg border border-black-200"
+              className="mt-10 lg:mt-0 w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-100 dark:bg-opacity-75 bg-black-100 dark:bg-black-200 rounded-lg border border-black-200 dark:border-black-300"
             >
               <a href={info.link} target="_blank" rel="noreferrer">
                 <img src={info.img} alt="icons" width={20} height={20} />
