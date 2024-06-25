@@ -89,7 +89,7 @@ const Hero = () => {
 
               {!isMdScreen && (
 
-                <a href="#about" className='mt-[10rem] lg:mt-0 scale-90'>
+                <a href="#about" className='mt-[5rem] lg:mt-0 scale-90'>
                   <MagicButton 
                   title="Show my work"
                   icon={<FaAngleDoubleDown />}
