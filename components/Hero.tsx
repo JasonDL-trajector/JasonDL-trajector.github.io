@@ -5,15 +5,15 @@ import { useTheme } from 'next-themes'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
-import { FaLocationArrow } from 'react-icons/fa'
-import { Switch } from './ui/Switch'
-import { Label } from './ui/label'
+import { FaLocationArrow, FaAngleDoubleDown } from 'react-icons/fa'
+import { useMediaQuery } from 'react-responsive';
 
 const Hero = () => {
 
   const [ mounted, setMounted ] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
   const [ isChecked, setIsChecked ] = useState(false);
+  const isMdScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
   useEffect(() => {
     setMounted(true);
@@ -58,7 +58,7 @@ const Hero = () => {
               
 
               <TextGenerateEffect 
-                  className='text-center text-[40px] md:text-5xl lg:text-6xl'
+                  className='text-center text-[36px] md:text-4xl lg:text-6xl'
                   words='Emmanuel Jason De Lara'
               />
 
@@ -66,14 +66,40 @@ const Hero = () => {
                   a Software Engineer based in the Philippines
               </p>
 
-              <a href="https://github.com/JasonDL-trajector" target="_blank" rel="noreferrer" className='mt-10 lg:mt-0'>
+              <div className='flex flex-col md:flex-row items-center justify-center lg:items-start lg:justify-between md:gap-x-10 gap-y-2 gap-x-2'>
+                <a href="https://github.com/JasonDL-trajector" target="_blank" rel="noreferrer" className='mt-10 md:mt-0 w-[15rem] md:w-auto scale-90 md:scale-100'>
+                    <MagicButton 
+                    title="Show my GitHub Profile"
+                    icon={<FaLocationArrow />}
+                    position= 'right'
+                    otherClasses='text-white'
+                    />
+                </a>
+
+                <a href="/De Lara - Resume.pdf" download="De Lara - CV" className='w-[15rem] md:w-auto scale-90 md:scale-100'>
+                    <MagicButton 
+                    title="Save my CV"
+                    icon={<FaLocationArrow />}
+                    position= 'right'
+                    otherClasses='text-white'
+                    />
+                </a>
+
+              </div>
+
+              {!isMdScreen && (
+
+                <a href="#about" className='mt-[10rem] lg:mt-0 scale-90'>
                   <MagicButton 
-                  title="Show my GitHub Profile"
-                  icon={<FaLocationArrow />}
+                  title="Show my work"
+                  icon={<FaAngleDoubleDown />}
                   position= 'right'
-                  otherClasses='text-white'
+                  otherClasses='text-black-100 dark:text-white-100 bg-zinc-100 dark:bg-black-100'
                   />
-              </a>
+                </a>
+
+              )}
+          
 
           </div>
         </div>

@@ -2,11 +2,14 @@
 
 import { BentoGrid, BentoGridItem } from './ui/BentoGrid'
 import { gridItems } from '@/data'
+import { useMediaQuery } from 'react-responsive';
 
 const Grid = () => {
   
+  const isMdScreen = useMediaQuery({ query: '(min-width: 768px)' });
+
   return (
-    <section id='about'>
+    <section id='about' className={!isMdScreen ? 'mt-[10rem]' : 'mt-0'}>
         <BentoGrid>
             {gridItems.map
             (({ id, title, description, className, img, imgDark, imgClassName, titleClassName, spareImg, spareImgDark }) => (
