@@ -9,6 +9,7 @@ import animationData from '@/data/confetti.json'
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import { useTheme } from "next-themes";
+import { useMediaQuery } from 'react-responsive';
 
 export const BentoGrid = ({
   className,
@@ -58,6 +59,7 @@ export const BentoGridItem = ({
   const [ mounted, setMounted ] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
   const [ isChecked, setIsChecked ] = useState(false);
+  const isMdScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
   useEffect(() => {
     setMounted(true);
@@ -138,8 +140,8 @@ export const BentoGridItem = ({
             <div className="font-sans font-extralight text-[#c1cc2d3] text-sm md:text-xs lg:text-base z-10">
               {description}
             </div>
-            <div className="font-sans font-bold text-lg lg:text-md max-w-96 z-10">
-            {title}
+            <div className={`font-sans font-bold text-md lg:text-md max-w-96 z-10 ${ (id === 1 && !isMdScreen) || (id === 2 && !isMdScreen) || (id === 5 && !isMdScreen) ? 'bg-[rgba(250,250,250,0.8)] dark:bg-transparent' : 'bg-transparent' }`}>
+              {title}
             </div>
 
             {id === 2 && <GlobeDemo />}
