@@ -18,7 +18,7 @@ const Experience = () => {
                     borderRadius='1.75rem'
                     className='flex-1 text-black dark:text-white border-slate-100 dark:neutral-200 dark:border-slate-100 shadow-[0_8px_16px_rgb(0_0_0/0.7)]'
                 >
-                    <div className='flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2'>
+                    <div className='flex lg:flex-row flex-col lg:items-center p-5 py-6 md:p-5 lg:p-10 gap-2'>
                         <img src={card.thumbnail} alt={card.thumbnail} className="lg:w-32 md:w-20 w-16" />
                         <div className='lg:ms-5'>
                             <h1 className='text-start text-xl md:text-2xl font-bold'>

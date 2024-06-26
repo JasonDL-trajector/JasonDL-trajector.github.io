@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
-import { FaLocationArrow, FaAngleDoubleDown } from 'react-icons/fa'
+import { FaGithub, FaAngleDoubleDown, FaClipboardList } from 'react-icons/fa'
 import { useMediaQuery } from 'react-responsive';
 
 const Hero = () => {
@@ -70,7 +70,7 @@ const Hero = () => {
                 <a href="https://github.com/JasonDL-trajector" target="_blank" rel="noreferrer" className='mt-10 md:mt-0 w-[15rem] md:w-auto scale-90 md:scale-100'>
                     <MagicButton 
                     title="Show my GitHub Profile"
-                    icon={<FaLocationArrow />}
+                    icon={<FaGithub />}
                     position= 'right'
                     otherClasses='text-white'
                     />
@@ -79,7 +79,7 @@ const Hero = () => {
                 <a href="/De Lara - Resume.pdf" download="De Lara - CV" className='w-[15rem] md:w-auto scale-90 md:scale-100'>
                     <MagicButton 
                     title="Save my CV"
-                    icon={<FaLocationArrow />}
+                    icon={<FaClipboardList />}
                     position= 'right'
                     otherClasses='text-white'
                     />

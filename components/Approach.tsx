@@ -120,7 +120,7 @@ const Card = ({
           </div>
           <h2
             // change text-3xl, add text-center
-            className="dark:text-white text-center text-3xl opacity-0 group-hover/canvas-card:opacity-100
+            className="dark:text-white text-center text-xl md:text-3xl opacity-0 group-hover/canvas-card:opacity-100
            relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white 
            group-hover/canvas-card:-translate-y-2 transition duration-200"
           >
@@ -128,7 +128,7 @@ const Card = ({
           </h2>
           {/* add this one for the description */}
           <p
-            className="text-sm opacity-0 group-hover/canvas-card:opacity-100
+            className="text-xs md:text-sm opacity-0 group-hover/canvas-card:opacity-100
            relative z-10 mt-4 group-hover/canvas-card:text-white text-center
            group-hover/canvas-card:-translate-y-2 transition duration-200"
             style={{ color: "#E4ECFF" }}
@@ -143,9 +143,9 @@ const Card = ({
 const AceternityIcon = ({ order } : { order: string }) => {
   return (
     <div> 
-        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+        <button className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 text-white backdrop-blur-3xl text-2xl font-bold">
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-5 py-2 text-white backdrop-blur-3xl text-sm md:text-lg font-bold">
                 {order}
             </span>
             </button>
