@@ -94,6 +94,18 @@ const Hero = () => {
               </div>
             </div>
 
+              {!isMdScreen && (
+
+                <a href="#about" className='mt-[5rem] lg:mt-0 scale-90'>
+                  <MagicButton 
+                  title="Show my work"
+                  icon={<FaAngleDoubleDown />}
+                  position= 'right'
+                  otherClasses='text-black-100 dark:text-white-100 bg-zinc-100 dark:bg-black-100'
+                  />
+                </a>
+
+              )}
         </div>
       )}
     </>
