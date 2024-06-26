@@ -23,33 +23,16 @@ export const InfiniteMovingCards = ({
 }) => {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
-  const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    setIsChecked(resolvedTheme === "dark");
-  }, [resolvedTheme]);
-
-  const onChange = (checked: boolean) => {
-    if (!mounted) {
-      return null;
-    }
-
-    if (checked) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
-
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const scrollerRef = React.useRef<HTMLUListElement>(null);
-
-  useEffect(() => {
     if (mounted) {
       addAnimation();
     }
   }, [mounted]);
+
+  const containerRef = React.useRef<HTMLDivElement>(null);
+  const scrollerRef = React.useRef<HTMLUListElement>(null);
 
   const [start, setStart] = useState(false);
 

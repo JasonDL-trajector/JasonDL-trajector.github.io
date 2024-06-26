@@ -10,6 +10,7 @@ import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import { useTheme } from "next-themes";
 import { useMediaQuery } from 'react-responsive';
+import Image from 'next/image'
 
 export const BentoGrid = ({
   className,
@@ -62,21 +63,10 @@ export const BentoGridItem = ({
   const isMdScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
   useEffect(() => {
+    console.log(resolvedTheme);
     setMounted(true);
     setIsChecked(resolvedTheme === 'dark');
   }, [resolvedTheme]);
-
-  const onChange = (checked: boolean) => {
-    if (!mounted) {
-      return null;
-    }
-
-    if (checked) {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
-  };
 
   const [copied, setCopied] = useState(false);
 
@@ -107,7 +97,8 @@ export const BentoGridItem = ({
           <div className="w-full h-full absolute">
             {img && imgDark && (
               
-              <img
+              <Image
+                width={500} height={500}
                 src={resolvedTheme === 'dark' ? imgDark : img}
                 alt={resolvedTheme === 'dark' ? imgDark : img}
                 className={cn(imgClassName, 'object-cover, object-center')}
@@ -117,7 +108,8 @@ export const BentoGridItem = ({
 
           <div className={`absolute right-0 -bottom-5 ${id === 5 && 'w-full opacity-80'}`}>
             {spareImg && spareImgDark && (
-              <img 
+              <Image
+                width={500} height={500} 
                 src={resolvedTheme === 'dark' ? spareImgDark : spareImg}
                 alt={resolvedTheme === 'dark' ? spareImgDark : spareImg}
                 className={'object-cover, object-center w-full h-full'}
@@ -192,11 +184,11 @@ export const BentoGridItem = ({
                 </div>
 
                 <MagicButton
-                  title={copied ? "Email is Copied!" : "Copy my email address"}
+                  title={copied ? "Email is copied!" : "Copy my email address"}
                   icon={<IoCopyOutline />}
                   position="left"
                   handleClick={handleCopy}
-                  otherClasses="bg-zinc-200 text-black-100 dark:!bg-[#161A31] dark:text-white-100"
+                  otherClasses="bg-zinc-200 text-black-100 dark:!bg-[#161A31] dark:text-white-100 text-[0.6rem] md:text-[.75rem]"
                 />
               </div>
             )}

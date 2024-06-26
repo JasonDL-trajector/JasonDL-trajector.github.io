@@ -14,7 +14,7 @@ const Approach = () => {
         <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         {/* add des prop */}
         <Card
-          title="Planning & Strategy"
+          title="Planning"
           icon={<AceternityIcon order="Phase 1" />}
           des="We'll collaborate to map out your website's goals, target audience, 
           and key functionalities. We'll discuss things like site structure, 
@@ -27,7 +27,7 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Progress Update"
+          title="Update"
           icon={<AceternityIcon order="Phase 2" />}
           des="Once we agree on the plan, I'll dive into
           coding. From initial figma sketches to polished code, I keep you updated
@@ -46,7 +46,7 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Launch"
+          title="Development"
           icon={<AceternityIcon order="Phase 3" />}
           des="This is where the magic happens! Based on the approved design, 
           I'll translate everything into functional code, building your website
