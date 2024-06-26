@@ -7,9 +7,9 @@ import { Label } from './ui/label'
 
 const Toggle = () => {
 
-    const [mounted, setMounted] = useState(false);
+    const [ mounted, setMounted] = useState(false);
     const { setTheme, resolvedTheme } = useTheme();
-    const [isChecked, setIsChecked] = useState(false);
+    const [ isChecked, setIsChecked ] = useState(false);
 
     useEffect(() => {
         setMounted(true);
