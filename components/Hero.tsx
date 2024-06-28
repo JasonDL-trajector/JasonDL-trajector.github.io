@@ -42,7 +42,7 @@ const Hero = () => {
               
               <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
                   <h2 className='uppercase tracking-widest text-xs text-center text-slate-700 dark:text-blue-100 max-w-80'>
-                      Hi, Everybody! I am
+                      Hi, Everybody! I am here
                   </h2>
 
                   
@@ -93,19 +93,6 @@ const Hero = () => {
 
               </div>
             </div>
-
-              {!isMdScreen && (
-
-                <a href="#about" className='mt-[5rem] lg:mt-0 scale-90'>
-                  <MagicButton 
-                  title="Show my work"
-                  icon={<FaAngleDoubleDown />}
-                  position= 'right'
-                  otherClasses='text-black-100 dark:text-white-100 bg-zinc-100 dark:bg-black-100'
-                  />
-                </a>
-
-              )}
         </div>
       )}
     </>
