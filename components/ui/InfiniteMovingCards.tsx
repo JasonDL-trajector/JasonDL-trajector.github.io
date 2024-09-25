@@ -125,7 +125,7 @@ export const InfiniteMovingCards = ({
                     <span className="flex flex-col gap-1">
                       <div className="me-3">
                         <img
-                          src="https://media.licdn.com/dms/image/C5103AQFRzUnYlpDGuw/profile-displayphoto-shrink_100_100/0/1558673476998?e=1724284800&v=beta&t=eFHSSsacmz6pF16dJnZEfKxklb_qUKT0f9-x6EmPN5M"
+                          src="https://scontent-mnl1-1.xx.fbcdn.net/v/t39.30808-6/364795308_817233696693335_2916061795925917316_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=9niNZmm9uFAQ7kNvgEWC3zj&_nc_ht=scontent-mnl1-1.xx&_nc_gid=AY7j3Sazfi6TS1RfEZzDys0&oh=00_AYAhdMHlefQAOGHRlaVzwcKwu08tzsnrG6aHb10j-roIqA&oe=66F9DE98"
                           alt="profile"
                           className="h-8 w-8"
                         />
